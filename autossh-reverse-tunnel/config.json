@@ -1,0 +1,30 @@
+{
+  "name": "AutoSSH Reverse Tunnel",
+  "version": "1.0.0",
+  "slug": "autossh_reverse_tunnel",
+  "description": "Persistent SSH reverse tunnel for accessing Home Assitant remotely.",
+  "startup": "services",
+  "boot": "auto",
+  "host_network": true,
+  "map": [
+    "config"
+  ],
+  "options": {
+    "host": "some.host.com",
+    "user": "user or secret",
+    "privateKey": "ssh private key or secret",
+    "remoteSSHPort": 22,
+    "remoteTunnelPort": 8123,
+    "serverAliveInterval": 30,
+    "serverAliveCountMax": 1
+  },
+  "schema": {
+    "host": "str",
+    "user": "str",
+    "privateKey": "str",
+    "remoteSSHPort": "port?",
+    "remoteTunnelPort": "port?",
+    "serverAliveInterval": "int?",
+    "serverAliveCountMax": "int?"
+  }
+}
