@@ -24,7 +24,7 @@ setup is necessary:
 * Linux machine which is public accessible from the World Wide Web.
   * **Note:** I'm using a virtual Debian 9.4 instance but every common Linux distribution
   should be fine
-  * Any cheap vServer intance (e.g. AWS EC2) will be enough
+  * Any cheap vServer instance (e.g. AWS EC2) will be enough
 
 * OpenSSH server installed on this machine.  
 
