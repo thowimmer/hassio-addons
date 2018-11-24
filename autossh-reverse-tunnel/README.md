@@ -163,9 +163,9 @@ which forwards all requests to our tunnel:
 * Replace `<some.host.com>` with the base URL under which the Home Assistant instance should be reachable.
 * Replace `<port>` with the remoteTunnelPort.
 
-## 3. Reverse proxy setup
+# Configuration
 
-### Configuration
+## Example configuration
 
 ```json
 {
@@ -178,41 +178,41 @@ which forwards all requests to our tunnel:
   "serverAliveCountMax": 1
 }
 ```
-### Required Configuration
+## Required Configuration
 
-#### Option: `host`
+### Option: `host`
 The host address of the remote machine.
 
-#### Option: `user`
+### Option: `user`
 The SSH user name. (See [Installation](#1.3-create-an-user-on-the-remote-machine)).
 
 **Note**: This option support secrets, e.g., `!secret reverse_tunnel_user`.
 
-#### Option: `privateKey`
+### Option: `privateKey`
 The SSH private key used for tunneling. (See [Installation](#1.3-create-an-user-on-the-remote-machine)).
 
 **Note**: Multiline private keys (as in standard private key files) are not supported ! Use `TODO command` to convert a private key file into a single line string supported by this addon.
 
 **Note**: This option support secrets, e.g., `!secret reverse_tunnel_private_key`.
 
-### Optional Configuration
+## Optional Configuration
 
-#### Option: `remoteSSHPort`
+### Option: `remoteSSHPort`
 SSH port used for remote tunneling.
 
 **Default** `22`
 
-#### Option: `remoteTunnelPort`
+### Option: `remoteTunnelPort`
 The port where the Home Assistant instance is exposed on the remote machine.
 
 **Default** `8123`
 
-#### Option: `serverAliveInterval`
+### Option: `serverAliveInterval`
 Timeout interval in seconds after which a message will be sent to the server if no data has been received by the server. (See [OpenSSH docs](https://man.openbsd.org/ssh_config.5#ServerAliveInterval))
 
 **Default** `30`
 
-#### Option: `serverAliveCountMax`
+### Option: `serverAliveCountMax`
 Number of unanswered server alive messages after which the client will terminate the SSH connection. (See [OpenSSH docs](https://man.openbsd.org/ssh_config.5#ServerAliveCountMax))
 
 **Default** `1`
