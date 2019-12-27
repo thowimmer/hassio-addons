@@ -26,5 +26,6 @@
     "remoteTunnelPort": "port?",
     "serverAliveInterval": "int?",
     "serverAliveCountMax": "int?"
-  }
+  },
+  "image": "thowimmer/hassio-autossh-reverse-tunnel-{arch}"
 }
