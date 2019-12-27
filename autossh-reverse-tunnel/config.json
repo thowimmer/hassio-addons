@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "slug": "autossh_reverse_tunnel",
   "description": "Persistent SSH reverse tunnel for accessing Home Assitant remotely.",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "services",
   "boot": "auto",
   "host_network": true,
